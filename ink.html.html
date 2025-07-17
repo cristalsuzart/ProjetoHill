@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aura Studio Tattoo • Hill Abreu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #000000, #1c1c1c, #444444, #bbbbbb, #ffffff);
+      font-family: 'Times Courier', monospace;
+      color: #ffffff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('AURA_LOGO_PRETA.png.png'); /* troque pelo caminho real */
+  background-repeat: repeat;
+  background-position: top left;
+  background-size: 150px;
+  opacity: 0.09; /* deixa sutil como marca d’água */
+  z-index: 0;
+  pointer-events: none;
+}
+    /* Conteúdo principal */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      width: 100%;
+    }
+
+    img.avatar {
+      width: 150px;
+      border-radius: 50%;
+      margin-top: 20px;
+      border: 2px solid #ffffff44;
+    }
+
+    h1 {
+      margin-top: 10px;
+      font-size: 26px;
+      color: #ffffff;
+    }
+
+    p {
+      color: #cccccc;
+      margin: 10px 0 20px;
+    }
+
+    a {
+      background-color: #ffffff;
+      color: #000000;
+      padding: 12px 24px;
+      margin: 10px auto;
+      display: block;
+      width: fit-content;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    a:hover {
+      background-color: #dddddd;
+    }
+
+    #info-local {
+      display: none;
+      margin-top: 15px;
+      background-color: #fff4cc;
+      color: #333333;
+      padding: 12px 18px;
+      border-left: 5px solid #ffc107;
+      border-radius: 8px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+
+    #info-local::before {
+      content: "⚠️ ";
+      font-weight: bold;
+    }
+
+    /* Galeria */
+    .portfolio {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+    }
+
+   .portfolio img {
+  width: 100%;
+  height: 160px; 
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+    .portfolio img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <img src="ink.png.png" alt="foto da Hillary" class="avatar">
+    <h1>✳ Aura Studio Tattoo • Por: Hill Abreu</h1> 
+    <p>Tatuadora especializada em fine line, ornamental, fauna e flora. Traços leves, essência marcante.</p>
+
+    <a href="https://wa.me/5521965292248" target="_blank">📞 Agendamento ou dúvidas no WhatsApp</a>
+    <a href="https://www.instagram.com/hill.ink" target="_blank">📸 Ver Portfólio no Instagram</a>
+    <a href="#!" onclick="mostrarInfo()">📍 Onde estamos localizados</a>
+
+    <div id="info-local">
+      Atendemos exclusivamente com hora marcada. Por esse motivo, o endereço completo é informado após a confirmação do agendamento. O estúdio fica nas proximidades do West Shopping, em Campo Grande – RJ.
+    </div>
+
+    <div class="portfolio">
+      <img src="tattoo1.png.img" alt="Tatuagem 1">
+      <img src="tattoo2.png.img" alt="tatuagem 2">
+      <img src="tattoo3.png.img" alt="Tatuagem 3">
+      <img src="tattoo4.png.jpg" alt="Tatuagem 4">
+      <!-- Adicione mais imagens abaixo copiando a linha acima -->
+    </div>
+  </div>
+
+  <script>
+    function mostrarInfo() {
+      const info = document.getElementById("info-local");
+      info.style.display = info.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
