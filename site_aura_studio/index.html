@@ -1,62 +1,166 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aura Studio Tattoo • Hill Abreu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hill Ink • Tatuagem fine line em Campo Grande, RJ</title>
+  <meta name="description" content="Hill Abreu, tatuadora especializada em fine line, ornamental, fauna e flora. Atendimento com hora marcada em Campo Grande, Rio de Janeiro.">
+  <meta name="theme-color" content="#0f0f0e">
+
+  <!-- Prévia ao compartilhar o link (WhatsApp, Instagram, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hill Ink • Tatuagem fine line">
+  <meta property="og:description" content="Traços leves, essência marcante. Fine line, ornamental, fauna e flora em Campo Grande, RJ.">
+  <meta property="og:image" content="img/og-hill-ink.jpg">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="content">
-    <img src="ink.jpg" alt="foto da Hillary" class="avatar">
-    <h1> Hill Ink • Por: Hill Abreu</h1> 
-    <p>Tatuadora especializada em fine line, ornamental, fauna e flora. Traços leves, essência marcante.</p>
 
-   <a href="https://wa.me/5521965292248" target="_blank">📞 Agendamento ou dúvidas no WhatsApp</a>
+  <!-- Ícones (usados com <use href="#...">) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-peaks" viewBox="0 0 48 24"><path d="M2 21 16 6l8 8 8-10 14 17"/></symbol>
+  </svg>
 
-    <a href="https://www.instagram.com/hill.ink" target="_blank">📸 Ver Portfólio no Instagram</a>
+  <header class="hero">
+    <img class="hero__avatar" src="img/hill-abreu.webp" width="480" height="480"
+         alt="Retrato de Hill Abreu, tatuadora da Hill Ink">
+    <p class="eyebrow">Hill Abreu · Tatuadora</p>
+    <h1 class="hero__title">Hill Ink</h1>
+    <p class="hero__tagline">Traços leves, essência marcante.</p>
+    <p class="hero__bio">Especializada em <strong>fine line</strong>, <strong>ornamental</strong>, <strong>fauna</strong> e <strong>flora</strong>.</p>
 
+    <nav class="actions" aria-label="Contato">
+      <a class="btn btn--primary"
+         href="https://wa.me/5521965292248?text=Ol%C3%A1%2C%20Hill!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento."
+         target="_blank" rel="noopener noreferrer">
+        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+      <a class="btn btn--ghost" href="https://www.instagram.com/hill.ink" target="_blank" rel="noopener noreferrer">
+        <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+        @hill.ink
+      </a>
+    </nav>
 
-    <a href="#!" onclick="mostrarInfo()">📍 Onde estamos localizados</a>
+    <!-- Colinas em traço fino -->
+    <svg class="hero__hills" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path class="hills__far" d="M0 120 180 70l80 25 160-65 140 60 120-30 140 45 160-65 140 45 140-30 180 45"/>
+      <path class="hills__mid" d="M0 135c160-40 300-40 440-15s280 30 440-8 320-32 560 13"/>
+      <path class="hills__near" d="M0 152c200-24 380-20 560-6s400 14 580-6 220-10 300 5"/>
+    </svg>
+  </header>
 
+  <main>
+    <section class="section" aria-labelledby="titulo-portfolio">
+      <div class="section__head">
+        <p class="eyebrow">Trabalhos recentes</p>
+        <h2 id="titulo-portfolio">Portfólio</h2>
+      </div>
 
+      <ul class="gallery">
+        <li><button class="gallery__item" type="button"><img src="img/leao-fineline-panturrilha.webp" width="1095" height="1400" loading="lazy" alt="Leão em fine line com a palavra ABBA, na panturrilha"></button></li>
+        <li><button class="gallery__item" type="button"><img src="img/sol-fineline.webp" width="617" height="812" loading="lazy" alt="Sol com rosto em fine line"></button></li>
+        <li><button class="gallery__item" type="button"><img src="img/mandalas-perna.webp" width="787" height="1400" loading="lazy" alt="Composição de mandalas ornamentais ao longo da perna"></button></li>
+        <li><button class="gallery__item" type="button"><img src="img/ramo-floral-antebraco.webp" width="787" height="1400" loading="lazy" alt="Ramo floral delicado com datas no antebraço"></button></li>
+        <li><button class="gallery__item" type="button"><img src="img/borboleta-flores-antebraco.webp" width="960" height="1280" loading="lazy" alt="Borboleta e flores em fine line no antebraço"></button></li>
+        <li><button class="gallery__item" type="button"><img src="img/abelha-favos-braco.webp" width="720" height="1280" loading="lazy" alt="Abelha com favos geométricos no braço"></button></li>
+        <li><button class="gallery__item" type="button"><img src="img/tartaruga-braco.webp" width="720" height="1280" loading="lazy" alt="Tartaruga marinha em fine line no braço"></button></li>
+        <li><button class="gallery__item" type="button"><img src="img/mandala-antebraco.webp" width="860" height="1280" loading="lazy" alt="Mandala ornamental com elementos geométricos no antebraço"></button></li>
+        <li><button class="gallery__item" type="button"><img src="img/mandala-mao-antebraco.webp" width="720" height="1280" loading="lazy" alt="Mandala ornamental do antebraço até a mão"></button></li>
+        <li><button class="gallery__item" type="button"><img src="img/leao-ombro.webp" width="787" height="1400" loading="lazy" alt="Leão com cruz no ombro"></button></li>
+        <li><button class="gallery__item" type="button"><img src="img/moldura-minimalista-antebraco.webp" width="960" height="1280" loading="lazy" alt="Moldura com ilustração minimalista e flores no antebraço"></button></li>
+      </ul>
 
-    <div id="info-local">
-      Atendemos exclusivamente com hora marcada. Por esse motivo, o endereço completo é informado após a confirmação do agendamento. O estúdio fica nas proximidades do West Shopping, em Campo Grande – RJ.
-    </div>
+      <p class="section__more">
+        <a class="link" href="https://www.instagram.com/hill.ink" target="_blank" rel="noopener noreferrer">Ver mais trabalhos no Instagram →</a>
+      </p>
+    </section>
 
+    <div class="divider" aria-hidden="true"><svg class="divider__peaks"><use href="#i-peaks"/></svg></div>
 
+    <section class="section section--narrow" aria-labelledby="titulo-agendar">
+      <div class="section__head">
+        <p class="eyebrow">Passo a passo</p>
+        <h2 id="titulo-agendar">Como agendar</h2>
+      </div>
 
+      <ol class="steps">
+        <li>
+          <h3>Conte sua ideia</h3>
+          <p>Chame no WhatsApp com referências, o local do corpo e o tamanho aproximado.</p>
+        </li>
+        <li>
+          <h3>Receba o orçamento</h3>
+          <p>Conversamos sobre o desenho e definimos o valor e a melhor data.</p>
+        </li>
+        <li>
+          <h3>Confirme o horário</h3>
+          <p>Após a confirmação, você recebe o endereço completo do estúdio.</p>
+        </li>
+      </ol>
 
+      <details class="location">
+        <summary>
+          <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+          Onde fica o estúdio?
+        </summary>
+        <p>
+          O atendimento é exclusivamente com hora marcada, por isso o endereço completo
+          é enviado após a confirmação do agendamento. O estúdio fica próximo ao
+          <strong>West Shopping, em Campo Grande – RJ</strong>.
+        </p>
+      </details>
+    </section>
+  </main>
 
+  <div class="divider" aria-hidden="true"><svg class="divider__peaks"><use href="#i-peaks"/></svg></div>
 
+  <footer class="footer">
+    <p class="footer__brand">Hill Ink</p>
+    <p>Hill Abreu · Campo Grande, Rio de Janeiro</p>
+    <p class="footer__links">
+      <a class="link" href="https://wa.me/5521965292248" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <span aria-hidden="true">·</span>
+      <a class="link" href="https://www.instagram.com/hill.ink" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </p>
+  </footer>
 
-
-
-
-    <div class="portfolio">
-       <img src="tattoo10.jpeg" alt="Tatuagem 10">
-      <img src="tattoo11.jpeg" alt="Tatuagem 11">
-      <img src="tattoo1.jpg" alt="Tatuagem 1">
-      <img src="tattoo2.jpg" alt="tatuagem 2">
-      <img src="tattoo3.jpg" alt="Tatuagem 3">
-      <img src="tattoo4.png.jpg" alt="Tatuagem 4">
-    <img src="tattoo5.png.jpeg" alt="Tatuagem 5">
-      <img src="tattoo6.jpg" alt="Tatuagem 6">
-      <img src="tattoo7.png.jpeg" alt="Tatuagem 7">
-      <img src="tattoo8.jpg" alt="Tatuagem 8">
-    <img src="tattoo9.png.jpeg" alt="Tatuagem 9">
-    
-    
-    </div>
-  </div>
+  <!-- Visualizador de imagem ampliada -->
+  <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada">
+    <button class="lightbox__close" type="button" aria-label="Fechar">
+      <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+    <img class="lightbox__img" src="" alt="">
+  </dialog>
 
   <script>
-    function mostrarInfo() {
-      const info = document.getElementById("info-local");
-      info.style.display = info.style.display === "block" ? "none" : "block";
-    }
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector(".lightbox__img");
+
+    document.querySelectorAll(".gallery__item").forEach((item) => {
+      const img = item.querySelector("img");
+      item.setAttribute("aria-label", "Ampliar: " + img.alt);
+      item.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.showModal();
+      });
+    });
+
+    // Fecha ao clicar no X ou fora da imagem
+    lightbox.addEventListener("click", (e) => {
+      if (e.target !== lightboxImg) lightbox.close();
+    });
   </script>
 </body>
 </html>
